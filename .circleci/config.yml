@@ -6,8 +6,8 @@ version: 2
 jobs:
   build:
     working_directory: /app
+    checkout
     docker:
-      - checkout
       - dockerfile: Dockerfile.dev
       - context: .
     steps:
