@@ -10,9 +10,6 @@ jobs:
       - image: zeeshanmulk/reactngixtestapp
     steps:
       - checkout
-      - run:
-          name: Install dependencies
-          command: npm install
       - run: 
           name: Executing tests
           command: npm run test
