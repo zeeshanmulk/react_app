@@ -4,10 +4,10 @@
 #
 version: 2
 jobs:
-  working_directory: /app
   build:
+    working_directory: /app
     docker:
-      - image: .
+      - dockerfile: Dockerfile.dev
       - run: docker build .
     steps:
       - checkout
