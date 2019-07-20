@@ -7,9 +7,10 @@ jobs:
   build:
     working_directory: /app
     docker:
-      - image: zeeshanmulk/reactngixtestapp
-    steps:
       - checkout
+      - dockerfile: Dockerfile.dev
+      - context: .
+    steps:
       - run: 
           name: Executing tests
           command: npm run test
