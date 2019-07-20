@@ -4,13 +4,13 @@
 #
 version: 2
 jobs:
+  working_directory: /app
   build:
-    working_directory: /app
-    checkout
     docker:
-      - dockerfile: Dockerfile.dev
-      - context: .
+      - image: .
+      - run: docker build .
     steps:
+      - checkout
       - run: 
           name: Executing tests
           command: npm run test
