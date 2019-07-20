@@ -7,7 +7,7 @@ jobs:
   build:
     working_directory: /app
     docker:
-      - dockerfile: Dockerfile.dev
+      - image: ./Dockerfile.dev
       - run: docker build .
     steps:
       - checkout
